@@ -6,6 +6,8 @@ import {
   clearGallery,
   showLoadMoreButton,
   hideLoadMoreButton,
+  showEndMessage,
+  hideEndMessage,
 } from './js/render-functions';
 
 import iziToast from 'izitoast';
@@ -39,6 +41,7 @@ async function onSubmit(event) {
 
   clearGallery();
   hideLoadMoreButton();
+  hideEndMessage();
 
   if (searchQuery === '') {
     iziToast.error({
@@ -68,6 +71,7 @@ async function onSubmit(event) {
 
     if (page >= totalPages) {
       hideLoadMoreButton();
+      showEndMessage();
 
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
@@ -104,6 +108,7 @@ async function onLoadMore() {
 
     if (page >= totalPages) {
       hideLoadMoreButton();
+      showEndMessage();
 
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",

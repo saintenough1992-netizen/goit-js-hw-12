@@ -9,6 +9,15 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionsDelay: 250,
   captionsData: 'title',
 });
+const endMessage = document.querySelector('.end-message');
+
+export function showEndMessage() {
+  endMessage.classList.remove('is-hidden');
+}
+
+export function hideEndMessage() {
+  endMessage.classList.add('is-hidden');
+}
 
 export function clearGallery() {
   gallery.innerHTML = '';

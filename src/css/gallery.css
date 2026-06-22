@@ -160,6 +160,14 @@
 .load-more:focus {
   background-color: #6c8cff;
 }
+.end-message {
+  text-align: center;
+  margin: 32px auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+
 .is-hidden {
   display: none;
 }
