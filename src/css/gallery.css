@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.form input {
+  width: 272px;
+  height: 40px;
+  padding: 0px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form input:hover {
+  border-color: #000;
+}
+
+.form input:focus {
+  border-color: #4e75ff;
+}
+
+.form button {
+  min-width: 91px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-item {
+  width: calc((100% - 80px) / 5);
+  border: 1px solid #808080;
+  background-color: #ffffff;
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.info-item b {
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+.loader {
+  display: block;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 15%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+  background-image:
+    linear-gradient(#000 16px, transparent 0),
+    linear-gradient(#4e75ff 16px, transparent 0),
+    linear-gradient(#4e75ff 16px, transparent 0),
+    linear-gradient(#000 16px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position:
+    left top,
+    left bottom,
+    right top,
+    right bottom;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
+  100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg);
+  }
+}
+.is-hidden {
+  display: none;
+}
